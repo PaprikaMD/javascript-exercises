@@ -1,7 +1,6 @@
 const findTheOldest = function(people) {
     return people.reduce((lastPerson, currPerson) => {
-        if(calculateAge(lastPerson) < calculateAge(currPerson)) return currPerson;
-        return lastPerson;
+        return calculateAge(lastPerson) < calculateAge(currPerson) ? currPerson : lastPerson;
     })
 
 };
